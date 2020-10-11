@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/visheshshukla/Chat-Room/issues"
   },
-  "homepage": "https://github.com/visheshshukla/Chat-Room#readme"
+  "homepage": "https://github.com/visheshshukla/Chat-Room#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
