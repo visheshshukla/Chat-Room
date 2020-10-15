@@ -6,13 +6,22 @@
     </head>
     <body>
         
-        <div id="messages"></div>
+        <div class="chat">
+            <div class="chat__sidebar">
 
-        <form id="message-form">
-            <input name="message" placeholder="Message">
-            <button>Send</button>
-        </form>
-        <button id="send-location">Send location</button>
+            </div>
+            <div class="chat__main">
+                <div id="messages" class="chat__messages"></div>
+
+                <div class="compose">
+                    <form id="message-form">
+                        <input name="message" placeholder="Message">
+                        <button>Send</button>
+                    </form>
+                    <button id="send-location">Send location</button>
+                </div>                
+            </div>
+        </div>
 
         <script id="message-template" type="text/html">
             <div>
