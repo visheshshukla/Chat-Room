@@ -172,12 +172,14 @@ button:disabled {
 .list-title {
     font-weight: 500;
     font-size: 18px;
-    margin-bottom: 4px;
     padding: 12px 24px 0 24px;
 }
 
 .users {
-    list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+
+.list {
+    margin: 5px;
 }
