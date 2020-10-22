@@ -62,8 +62,7 @@ button:disabled {
     background: #333744;
     width: 100vw;
     height: 100vh;   
-    display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -81,6 +80,16 @@ button:disabled {
 .centered-form input {
     margin-bottom: 16px;
     width: 100%;
+}
+
+.jumbo_bg {
+    background-color:#F7F7FA;
+}
+
+@media screen and (max-width: 900px) {
+    .centered-form { display: flex; flex-direction: column; flex-wrap: nowrap;}
+    .jumbo { order: 1; }
+    .join { max-width: 250px; order: 2; }
 }
 
 /* Chat Page Layout */
