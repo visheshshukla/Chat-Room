@@ -1,5 +1,10 @@
 /* General Styles */
 
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -33,13 +38,13 @@ label {
 
 input {
     border: 1px solid #eeeeee;
-    padding: 12px;
+    padding: 10px;
     outline: none;
 }
 
 button {
     cursor: pointer;
-    padding: 12px;
+    padding: 8px;
     background: #7C5CBF;
     border: none;
     color: white;
@@ -96,20 +101,39 @@ button:disabled {
 
 .chat {
     display: flex;
+    padding: 0%;
+}
+
+.row {
+    width: 100%;
+    margin-left: 0.5%;
 }
 
 .chat__sidebar {
-    height: 100vh;
     color: white;
     background: #333744;
-    width: 225px;
-    overflow-y: scroll
+}
+
+@media screen and (max-width: 768px) {
+    .row { flex-direction: column; }
+    .chat__messages { height: 84vh;}
+    .compose { width: 100%; padding: 10px 30px 10px 0px; }
+    .collapse:not(.show) {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 768px) {
+    .row { flex-direction: row; }
+    .chat__messages { max-height: 89%;}
+    .room-details { max-width: 20%;}
+    .compose { width: 80%; padding: 24px 48px 24px 24px;}
+    .chat__sidebar { height: 94vh;}
 }
 
 /* Chat styles */
 
 .chat__main {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     max-height: 100vh;
@@ -117,7 +141,7 @@ button:disabled {
 
 .chat__messages {
     flex-grow: 1;
-    padding: 24px 24px 0 24px;
+    padding: 24px 20px 0 20px;
     overflow-y: scroll;
 }
 
@@ -125,12 +149,12 @@ button:disabled {
 
 .message {
     margin-bottom: 16px;   
+    overflow-wrap: break-word;
 }
 
 .message__name {
     font-weight: 600;
     font-size: 14px;
-    margin-right: 8px;
 }
 
 .message__meta {
@@ -147,8 +171,8 @@ button:disabled {
 .compose {
     display: flex;
     flex-shrink: 0;
-    margin-top: 16px;
-    padding: 24px;
+    bottom: 0.5%;
+    position: fixed;
 }
 
 .compose form {
