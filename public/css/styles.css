@@ -13,6 +13,8 @@ body {
 
 html {
     font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 input {
@@ -45,7 +47,7 @@ input {
 button {
     cursor: pointer;
     padding: 8px;
-    background: #7C5CBF;
+    background: #33afd4;
     border: none;
     color: white;
     font-size: 16px;
@@ -53,7 +55,7 @@ button {
 }
 
 button:hover {
-    background: #6b47b8;
+    background: #E93A6D;
 }
 
 button:disabled {
@@ -64,7 +66,7 @@ button:disabled {
 /* Join Page Styles */
 
 .centered-form {
-    background: #333744;
+    background: #284c6e;
     width: 100vw;
     height: 100vh;   
     justify-content: space-evenly;
@@ -91,10 +93,18 @@ button:disabled {
     background-color:#F7F7FA;
 }
 
+.image { 
+    vertical-align: baseline;
+}
+
 @media screen and (max-width: 900px) {
     .centered-form { display: flex; flex-direction: column; flex-wrap: nowrap;}
-    .jumbo { order: 1; }
+    .jumbo { order: 1; max-width: 320px; max-height: 310px; padding-top: 0%; padding-bottom: 0%; margin-top: 1%; margin-bottom: 4%;}
     .join { max-width: 250px; order: 2; }
+    .join_head { white-space: nowrap; margin-left: -10px;}
+    .image { height: 50px; width: 50px;}
+    .welcome_head { margin-top: 30px; margin-bottom: 0%;}
+    .my-4 { margin-top: 0rem !important; margin-bottom: 0.5rem !important;}
 }
 
 /* Chat Page Layout */
@@ -105,17 +115,17 @@ button:disabled {
 }
 
 .row {
-    width: 100%;
-    margin-left: 0.5%;
+    width: 103%;
+    /* margin-left: 0.5%; */
 }
 
 .chat__sidebar {
     color: white;
-    background: #333744;
+    background: #284c6e;
 }
 
 @media screen and (max-width: 768px) {
-    .row { flex-direction: column; }
+    .row { flex-direction: column; width: 100%; margin-left: 0.3%;}
     .chat__messages { height: 84vh;}
     .compose { width: 100%; padding: 10px 30px 10px 0px; }
     .collapse:not(.show) {
@@ -137,6 +147,7 @@ button:disabled {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
+    /* padding: 0%; */
 }
 
 .chat__messages {
@@ -198,7 +209,7 @@ button:disabled {
 .room-title {
     font-weight: 400;
     font-size: 22px;
-    background: #2c2f3a;
+    background: #284c6e;
     padding: 24px;   
 }
 
@@ -215,4 +226,9 @@ button:disabled {
 
 .list {
     margin: 5px;
+}
+
+.btn, .btn:hover, .btn:active, .btn:visited {
+    background-color: #284c6e;
+    color: white !important;
 }
